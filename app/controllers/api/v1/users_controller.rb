@@ -18,6 +18,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      @user.update(image_url: url_for(@user.image))
      render json: @user, status: :created
    else
      render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
@@ -36,7 +37,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:full_name, :email, :password, :password_confirmation, :gender, :coordinates, :date_of_birth, :image )
+    params.permit(:full_name, :email, :password, :password_confirmation, :gender, :coordinates, :date_of_birth, :image, interested_genders:[])
   end
 
   def find_user
