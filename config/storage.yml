@@ -14,22 +14,11 @@ local:
 #   region: us-east-1
 #   bucket: your_own_bucket
 
-# Remember not to checkin your GCS keyfile to a repository
+# Remember not to check in your GCS keyfile to a repository
 google:
   service: GCS
   project: crave_me_project
-  credentials: {
-     type: "service_account",
-  project_id: "craveme-1555959786959",
-  private_key_id: "ce54810fc8a85909e74bfccc4955eb6dca5957d5",
-  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCflkPpz3Lt1NF1\nY+JLAuVcfxBUTVXUC4p+y4dNe0G0FusUgdOWzhtRJHcCxqpN4L0NvUh0UM9wX0DZ\n+PyUO2Qwh1psoBqR804pcV5AjuQdRG+1lqEjHvzBmHJAyIoe2aWgUqcwnKRCmDbB\n+OMxEuHLNFXAvjudkvBcS19+v8EGN6NBQSSX0uR2X5vScoUgSXLkJYFfKv/SVEoc\nDnmXg3eIm+nFFmw5uZXIkh7ccqR7OAnQCxbnzYmr0sHJU67lZ7SxhzvmFPBBbfsy\nxPx4CXJlEab8DuWAyrBWSWjDoOHyvTK4dct8+ZCRyA9oDCglx6qdrEOHzcW/hT40\nBZIbA7FNAgMBAAECggEAIokzncoL6m3DvYaV7ptMFSIXX9MTp62utWVo3Mr3i1hp\nW9kDuA9XCI6eZb6mFO/1od9MaoWhesVWZMWWLaMTuc/U8QyN63duuxfCaLCzq6TH\nkxHrwcy/MMtDsILlpyr9Ra6VaXcAsju8H+qzigd2z1G+XBWfE6j8tNCH9Eddp7Ez\nrBk/n2zjMJsg5gJXryF7PnUt+ej6+2JCIEQI6gvukCwPFrlCAwqTVPJaM9Tvgbiv\nucy62pcJHNX+RQW/d2teIhJweVMJyUvMcI/MOMvkgt2tTCu6qB4F0CUnvvYcayAs\nwbre2l+qud/qfZaHikxqqnrjaE1vR1/1Jbrl3r9wSQKBgQDRi5z8WxEvLB9R1CQz\nCWVBOEJOh/VY960EA4NEw07wYAyayjIMObiUDY/kzajs3we/sC1bqRB6Om82IMwl\n8hkaXe+1iGZFR0MmZQ5VK993YKm5E3vPMQWto5ljF11NGtqoxEe2Ldlsok1R83F7\n0BNnaWIGuJBlMVHvsj4KYDFKuQKBgQDC91l63O7bwBp991WRnNoIudP7ym92suu6\nhw/FpLRiQx0h52Mgpv4pYbPYl8tyzOE6AGDoYMmZ+s+0To3MbXyTUv2MNZxhkgoO\nm2UB/19O+iHPj1yJ0kqE8u/+YOl0d1egoYfk/lwrLoxmZllIzh37iciFxgqkMncv\nA+I5d2iBNQKBgCpN5GiyPfrnDn+ns5M2L2IGaKSQIEFQ53Yq+2Jzh8lRqtnJPmdn\nc9M4FbfcqWEA+gCCIfYiYLg8ed1Uq8JxaQ4ArvdYTUVpSK5EsqsRS3E/a6R4wYMn\n43yVzc7KlcSOSlzOG6g1A3NCJRgJbPzRGknDZc3zjvtPBLq+onXXy7vJAoGANxqn\n/LTTAeMi2bV9RuGZMlwrUQAfTuI1BAxGZesuXJNxeXKnrsPkFBgcN7x3cSP9CGKx\nARzR/iZIbELDiyLq0czkAqvoXh9jnktHWjAuZOkHg12WnxGDpF3xfOkxMozEhI8D\nFLLbpAzM++gzlgNDsCN6PG0D9vKYgv5LA0j/jX0CgYA5bMM2Q4kuwyeZACos33Qi\nrDJ3PhwqN5LDeJkx98Ly5N4XUMsk++EcvHOFAS0u5UqzDtYtTIzE45YlPuB9XiTf\nP1tw+mPVushuZD3SFFCqYZEcj1OocrcsX+Ctvk7qiVqPRr38SxBC7gKzfbWAmITK\ng3CQavVVg9HxasG+puvjMw==\n-----END PRIVATE KEY-----\n",
-  client_email: "crave-me@craveme-1555959786959.iam.gserviceaccount.com",
-  client_id: "107816241276932702026",
-  auth_uri: "https://accounts.google.com/o/oauth2/auth",
-  token_uri: "https://oauth2.googleapis.com/token",
-  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/crave-me%40craveme-1555959786959.iam.gserviceaccount.com"
-    }
+  credentials: <%= Rails.application.credentials.dig(:google, :secret_access_key) %>
   bucket: crave_me_project
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
