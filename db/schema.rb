@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_195324) do
   end
 
   create_table "genders", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

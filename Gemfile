@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.3.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -48,3 +48,6 @@ gem "google-cloud-storage", "~> 1.11", require: false
 
 # Added so jsoned data can be serialized
 gem 'active_model_serializers'
+
+# Addidng jwt gem for auth and autc
+gem "jwt", "~> 2.1"
