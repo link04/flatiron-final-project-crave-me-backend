@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crave: one
+  match: one
+  accepted_match: false
+
+two:
+  crave: two
+  match: two
+  accepted_match: false
