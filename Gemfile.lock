@@ -236,11 +236,7 @@ DEPENDENCIES
   yelp
 
 RUBY VERSION
-<<<<<<< HEAD
-   ruby 2.5.3p105
-=======
-   ruby 2.3.3p222
->>>>>>> parent of af6befe... first commit
+  ruby 2.5.3p105
 
 BUNDLED WITH
    2.0.1
