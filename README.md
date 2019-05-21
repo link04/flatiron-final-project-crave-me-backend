@@ -1,4 +1,4 @@
-# CraveMe - Frontend
+# CraveMe - Backend
 
 CraveMe is a dating web app that gives the users the opportunity to match with other users based on at least two craves out of four crave daily options they may have in common with other users. Then the user will get the option of choosing if the liked the other user and would like to start a conversation with them, it will also provides the idea of what to do for their first date... eat whatever they are craving and matched for.
 
@@ -14,13 +14,13 @@ After cloning this project and going into the directory of the project run
 
 ```
 $ bundle install
-
 ```
+
 If you get a different version used form assign error, run then try the above step again
 ```
 $ rvm use 2.5.3
-
 ```
+
 Because this project uses PostgreSQL you need to turn on the server so it works properly.
 
 ```
@@ -29,7 +29,6 @@ $ rails db:create
 $ rails db:migrate:up VERSION=20190424194912
 
 $ rails db:migrate
-
 ```
 
 Before you can seed the project you will have to create a seed a file inside the db folder and add this inside
@@ -39,7 +38,6 @@ Gender.create(name:'Male')
 Gender.create(name:'Female')
 Gender.create(name:'Transexual')
 Gender.create(name:'Non-Binary')
-
 ```
 
 Then using the API of your choice scrapped that and create different menu choices with at this 3 different categories
@@ -66,7 +64,7 @@ $ rails s
 After doing this processes you should get a GCS bucket API key and copy that to the projects config folder then  update the storage file google credentials key name so you are able to upload pics to the cloud during production.
 
 
-![](after-installation.gif)
+![](api-installation.gif)
 
 ## Built With
 
