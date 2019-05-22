@@ -1,6 +1,6 @@
 class MatchedCrave < ApplicationRecord
-  belongs_to :crave , dependent: :destroy
-  belongs_to :match , dependent: :destroy
+  belongs_to :crave
+  belongs_to :match
   has_one :user, through: :crave
 
   def user_data()
